@@ -8,16 +8,19 @@ const IndexPage = (catalogs) => {
       url: 'https://product.gelatoapis.com/v3/catalogs',
       headers: {
         'X-API-KEY': process.env.API_KEY,
-        "Access-Control-Allow-Origin": "*"
+        'Access-Control-Allow-Origin': '*',
+        'X-Requested-With': 'XMLHttpRequest'
       },
       data: {
         ...catalogs
       }
   }
-  console.log ("CONFIG " + config)
+  console.log ("CONFIG " + JSON.stringify(config))
   axios(config)
   .then(function (response){
     console.log(JSON.stringify(response.data))
+    let data = response.data
+    return data
   })
   .catch(function (error) {
     console.log(error)
