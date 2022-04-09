@@ -26,14 +26,28 @@ const IndexPage = (catalogs) => {
   //   console.log(error)
   // });
 
-  const res = axios.get('https://product.gelatoapis.com/v3/catalogs', {
+  // const res = axios.get('https://product.gelatoapis.com/v3/catalogs', {
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //     'X-API-KEY': process.env.API_KEY,
+  //   }
+  // })
+
+
+  const url = 'https://product.gelatoapis.com/v3/catalogs'
+
+  const options = {
+    method: 'GET',
     headers: {
-      'Content-Type': 'application/json',
       'X-API-KEY': process.env.API_KEY,
     }
-  })
+  }
 
-  console.log(res.data)
+  fetch(url, options)
+  .then((response) => response.json())
+  .then((data) => {
+      console.log(data)
+  });
 
   return (
     <div>
