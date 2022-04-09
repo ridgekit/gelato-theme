@@ -7,7 +7,8 @@ const IndexPage = (catalogs) => {
       method: 'get',
       url: 'https://product.gelatoapis.com/v3/catalogs',
       headers: {
-        'X-API-KEY': process.env.API_KEY
+        'X-API-KEY': process.env.API_KEY,
+        "Access-Control-Allow-Origin": "*"
       },
       data: {
         ...catalogs
