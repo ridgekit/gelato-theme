@@ -14,7 +14,7 @@ const IndexPage = (catalogs) => {
         ...catalogs
       }
   }
-  console.log ("CONFIG " + axios.config)
+  console.log ("CONFIG " + config)
   axios(config)
   .then(function (response){
     console.log(JSON.stringify(response.data))
@@ -26,7 +26,8 @@ const IndexPage = (catalogs) => {
   return (
     <div>
         <h1>Home Page</h1>
-
+        {catalogs.catalogUid}
+        {catalogs.title}
     </div>
   )
 }
