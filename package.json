@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "gatsby": "^4.11.2",
+    "gatsby-plugin-netlify": "^4.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
