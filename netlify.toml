@@ -2,4 +2,5 @@
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
     [headers.values]
+    Access-Control-Allow-Origin = "*"
     Referrer-Policy = "strict-origin-when-cross-origin"
