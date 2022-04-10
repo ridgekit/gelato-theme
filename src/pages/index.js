@@ -25,7 +25,7 @@ const IndexPage = (catalogs) => {
     return data
   })
   .catch(function (error) {
-    console.log(error.toJSON())
+    console.log(error)
   });
 
   // const res = axios.get('https://product.gelatoapis.com/v3/catalogs', {
